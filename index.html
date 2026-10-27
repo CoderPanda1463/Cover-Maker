@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0E1117">
+  <meta name="description" content="Create a clean, ready-to-submit lab report cover page in seconds. Free, no sign-up, and generated privately in your browser.">
+  <meta property="og:title" content="Cover Page Maker by Fuad">
+  <meta property="og:description" content="Lab report covers, done in seconds. Create and download a clean, ready-to-submit PDF.">
+  <title>Cover Page Maker by Fuad | Free lab report cover generator</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%234F7DD6'/%3E%3Ctext x='20' y='28' text-anchor='middle' font-family='Arial,sans-serif' font-size='25' font-weight='700' fill='white'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="topbar-inner" aria-label="Main navigation">
+      <a class="wordmark" href="#home" aria-label="Cover Page Maker home">
+        <span>Cover <span class="wordmark-accent">Page</span> Maker</span>
+        <span class="brand-credit">by Fuad</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#create">Create</a>
+        <a href="#assignment-create">Assignment</a>
+        <a class="button button-primary nav-cta" href="#create">Get started</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">A simpler way to submit</p>
+        <h1>Lab report covers,<br>done in seconds.</h1>
+        <p class="hero-copy">Fill in your details, hit generate, and download a clean, ready-to-submit cover page. No design work, no formatting headaches.</p>
+        <div class="hero-actions">
+          <a class="button button-primary button-large" href="#create">Create your cover</a>
+          <a class="text-link" href="#how-it-works">How it works <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="trust-line">Free. No sign-up. Your details never leave your browser.</p>
+      </div>
+    </section>
+
+    <section class="how-section section-wrap" id="how-it-works" aria-labelledby="how-title">
+      <div class="section-heading">
+        <p class="eyebrow">Three simple steps</p>
+        <h2 id="how-title">How it works</h2>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M8 4h8l4 4v12H4V4h4Zm7 0v5h5M8 13h8M8 17h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>1. Fill in the details</h3>
+          <p>Enter your course, experiment, and student information.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.64 5.64l2.12 2.12m8.48 8.48 2.12 2.12m0-12.72-2.12 2.12m-8.48 8.48-2.12 2.12M9 9l6 6m0-6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+          <h3>2. Generate</h3>
+          <p>We place everything neatly onto the official cover layout.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>3. Download</h3>
+          <p>Get a print-ready PDF instantly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="create-section section-wrap" id="create" aria-labelledby="create-title">
+      <div class="form-card">
+        <div class="form-heading">
+          <p class="eyebrow">Ready when you are</p>
+          <h2 id="create-title">Create your cover page</h2>
+          <p>Enter your information below. Your details are saved in this browser.</p>
+        </div>
+        <form id="cover-form" novalidate>
+          <div class="form-grid">
+            <div class="field-group field-full">
+              <label for="courseTitle">Course Title <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="courseTitle" name="courseTitle" type="text" maxlength="160" placeholder="Artificial Intelligence Lab" autocomplete="off" required aria-describedby="courseTitle-error">
+              <p class="field-error" id="courseTitle-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group field-full">
+              <label for="experimentNo">No of Experiment <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="experimentNo" name="experimentNo" type="text" maxlength="160" placeholder="03" autocomplete="off" required aria-describedby="experimentNo-error">
+              <p class="field-error" id="experimentNo-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group field-full">
+              <div class="label-row"><label for="experimentName">Name of Experiment <span class="required-mark" aria-hidden="true">*</span></label><span class="character-count" id="experimentName-count">0/120</span></div>
+              <textarea id="experimentName" name="experimentName" rows="2" maxlength="120" placeholder="Implementation of A* Search" required aria-describedby="experimentName-help experimentName-error"></textarea>
+              <p class="field-help" id="experimentName-help">Up to 120 characters.</p>
+              <p class="field-error" id="experimentName-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group field-full">
+              <label for="studentName">Student Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="studentName" name="studentName" type="text" maxlength="160" placeholder="Your full name" autocomplete="name" required aria-describedby="studentName-error">
+              <p class="field-error" id="studentName-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="section">Section</label>
+              <input id="section" name="section" type="text" maxlength="160" placeholder="e.g. A" autocomplete="off" aria-describedby="section-error">
+              <p class="field-error" id="section-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="roll">Roll <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="roll" name="roll" type="text" maxlength="160" placeholder="e.g. 210045" autocomplete="off" required aria-describedby="roll-error">
+              <p class="field-error" id="roll-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="semester">Semester</label>
+              <input id="semester" name="semester" type="text" maxlength="160" placeholder="e.g. 5th" autocomplete="off" aria-describedby="semester-error">
+              <p class="field-error" id="semester-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="group">Group</label>
+              <input id="group" name="group" type="text" maxlength="160" placeholder="4" autocomplete="off" aria-describedby="group-error">
+              <p class="field-error" id="group-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="expDate">Exp. Date</label>
+              <input id="expDate" name="expDate" type="date" aria-describedby="expDate-error">
+              <p class="field-error" id="expDate-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="submissionDate">Submission date</label>
+              <input id="submissionDate" name="submissionDate" type="date" aria-describedby="submissionDate-error">
+              <p class="field-error" id="submissionDate-error" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form-actions" id="form-actions">
+            <button class="button button-primary button-large generate-button" id="generate-button" type="submit">Generate cover page</button>
+            <button class="button button-ghost" id="clear-button" type="button">Clear form</button>
+          </div>
+          <p class="form-error" id="form-error" role="alert" aria-live="assertive" hidden></p>
+        </form>
+        <section class="success-panel" id="success-panel" aria-live="polite" hidden>
+          <span class="success-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Your cover page is ready</h3>
+          <p class="filename" id="success-filename"></p>
+          <button class="button button-primary button-large" id="download-button" type="button">Download PDF</button>
+          <button class="text-link make-another" id="make-another-button" type="button">Make another</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="create-section section-wrap assignment-section" id="assignment-create" aria-labelledby="assignment-create-title">
+      <div class="form-card">
+        <div class="form-heading">
+          <p class="eyebrow">A second cover, same simple process</p>
+          <h2 id="assignment-create-title">Create your assignment cover</h2>
+          <p>Enter your course and student information for the assignment cover.</p>
+        </div>
+        <form id="assignment-form" novalidate>
+          <div class="form-grid">
+            <div class="field-group field-full">
+              <label for="assignment-courseTitle">Course Title <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="assignment-courseTitle" name="courseTitle" type="text" maxlength="160" placeholder="Artificial Intelligence Lab" autocomplete="off" required aria-describedby="assignment-courseTitle-error">
+              <p class="field-error" id="assignment-courseTitle-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group field-full">
+              <label for="assignment-studentName">Student Name <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="assignment-studentName" name="studentName" type="text" maxlength="160" placeholder="Your full name" autocomplete="name" required aria-describedby="assignment-studentName-error">
+              <p class="field-error" id="assignment-studentName-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="assignment-section">Section</label>
+              <input id="assignment-section" name="section" type="text" maxlength="160" placeholder="e.g. A" autocomplete="off" aria-describedby="assignment-section-error">
+              <p class="field-error" id="assignment-section-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="assignment-roll">Roll <span class="required-mark" aria-hidden="true">*</span></label>
+              <input id="assignment-roll" name="roll" type="text" maxlength="160" placeholder="e.g. 210045" autocomplete="off" required aria-describedby="assignment-roll-error">
+              <p class="field-error" id="assignment-roll-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="assignment-semester">Semester</label>
+              <input id="assignment-semester" name="semester" type="text" maxlength="160" placeholder="e.g. 5th" autocomplete="off" aria-describedby="assignment-semester-error">
+              <p class="field-error" id="assignment-semester-error" aria-live="polite"></p>
+            </div>
+            <div class="field-group">
+              <label for="assignment-submissionDate">Submission date</label>
+              <input id="assignment-submissionDate" name="submissionDate" type="date" aria-describedby="assignment-submissionDate-error">
+              <p class="field-error" id="assignment-submissionDate-error" aria-live="polite"></p>
+            </div>
+          </div>
+          <div class="form-actions" id="assignment-form-actions">
+            <button class="button button-primary button-large generate-button" id="assignment-generate-button" type="submit">Generate assignment cover</button>
+            <button class="button button-ghost" id="assignment-clear-button" type="button">Clear form</button>
+          </div>
+          <p class="form-error" id="assignment-form-error" role="alert" aria-live="assertive" hidden></p>
+        </form>
+        <section class="success-panel" id="assignment-success-panel" aria-live="polite" hidden>
+          <span class="success-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <h3>Your assignment cover is ready</h3>
+          <p class="filename" id="assignment-success-filename"></p>
+          <button class="button button-primary button-large" id="assignment-download-button" type="button">Download PDF</button>
+          <button class="text-link make-another" id="assignment-make-another-button" type="button">Make another</button>
+        </section>
+      </div>
+    </section>
+
+    <section class="faq-section section-wrap" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">A few answers</p>
+        <h2 id="faq-title">Frequently asked questions</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>Is my data stored?</summary><p>No, everything stays in your browser and is generated on your device. Your form values are saved locally in this browser for convenience.</p></details>
+        <details><summary>Can I edit the PDF afterwards?</summary><p>Yes, it is a standard PDF that you can open and edit with a compatible PDF editor.</p></details>
+        <details><summary>Which fonts are used?</summary><p>The cover uses a Times New Roman style to match the template.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span class="footer-owner">Fuad Al Hasan</span>
+    <nav class="footer-contacts" aria-label="Contact Fuad">
+      <a href="mailto:gen.fuad123@gmail.com" aria-label="Email Fuad" title="Email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 6.5h17v11h-17zM4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="contact-label">Email</span>
+      </a>
+      <a href="tel:+8801686528188" aria-label="Call 01686528188" title="Phone">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.1 3.8 9.6 7l-1.7 2.2a14 14 0 0 0 6.9 6.9l2.2-1.7 3.2 2.5-.8 3.1a2 2 0 0 1-2.2 1.5C9.3 20.4 3.6 14.7 2.5 6.8A2 2 0 0 1 4 4.6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="contact-label">01686528188</span>
+      </a>
+      <a href="https://wa.me/8801908550358" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Fuad" title="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3 20l1.2-4.9a8.2 8.2 0 1 1 16-3.4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.2 7.8c.3-.5.6-.5 1-.5.2 0 .4 0 .6.5l.8 1.8c.1.3.1.5-.1.7l-.6.7c-.2.2-.2.4 0 .7.5.8 1.3 1.6 2.3 2.1.3.2.5.2.7-.1l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .4-.2 1.1-.7 1.5-.5.5-1.2.7-2 .5-1.3-.3-2.8-1.1-4.2-2.5-1.2-1.2-2-2.6-2.2-3.7-.2-.7.1-1.4.7-1.9Z" fill="currentColor"/></svg>
+        <span class="contact-label">WhatsApp</span>
+      </a>
+      <a href="https://www.linkedin.com/in/fuad-al-hasan-b046b3380/" target="_blank" rel="noopener noreferrer" aria-label="Fuad on LinkedIn" title="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8.5v10M5 5.5v.1M9.5 18.5v-6a3 3 0 0 1 6 0v6m0 0v-6a3 3 0 0 1 6 0v6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        <span class="contact-label">LinkedIn</span>
+      </a>
+      <a href="https://github.com/CoderPanda1463" target="_blank" rel="noopener noreferrer" aria-label="Fuad on GitHub" title="GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19.5c-4.2 1.3-4.2-2.1-5.8-2.6M14.8 21v-3.2a2.8 2.8 0 0 0-.8-2.2c2.7-.3 5.5-1.3 5.5-6A4.7 4.7 0 0 0 18.2 6a4.4 4.4 0 0 0-.1-3.3s-1-.3-3.3 1.2a11.5 11.5 0 0 0-6 0C6.5 2.4 5.5 2.7 5.5 2.7A4.4 4.4 0 0 0 5.4 6a4.7 4.7 0 0 0-1.3 3.6c0 4.7 2.8 5.7 5.5 6a2.8 2.8 0 0 0-.8 2.2V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="contact-label">GitHub</span>
+      </a>
+      <a href="https://www.facebook.com/general.fuad" target="_blank" rel="noopener noreferrer" aria-label="Fuad on Facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h2.7l.4-3H14V8.1c0-.9.3-1.5 1.6-1.5h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H8v3h2.6v8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="contact-label">Facebook</span>
+      </a>
+    </nav>
+    <span class="footer-brand">Cover Page Maker <span aria-hidden="true">·</span> <span id="current-year"></span></span>
+  </footer>
+
+  <section class="debug-section section-wrap" id="debug-preview" aria-label="Developer template preview" hidden>
+    <h2>Developer preview — FIELDS coordinates</h2>
+    <div class="debug-page">
+      <iframe title="Developer-only cover template preview"></iframe>
+      <div class="debug-overlays" id="debug-overlays" aria-hidden="true"></div>
+    </div>
+    <h2>Developer preview — assignment cover coordinates</h2>
+    <div class="debug-page">
+      <iframe title="Developer-only assignment template preview"></iframe>
+      <div class="debug-overlays" id="assignment-debug-overlays" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div id="status" class="toast" role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+  <dialog id="clear-dialog" class="confirm-dialog" aria-labelledby="clear-title" aria-describedby="clear-description">
+    <form method="dialog" class="dialog-card">
+      <h2 id="clear-title">Clear all fields?</h2>
+      <p id="clear-description">This will remove your saved entries from this browser.</p>
+      <div class="dialog-actions">
+        <button class="button button-ghost" value="cancel">Cancel</button>
+        <button id="confirm-clear-button" class="button button-danger" value="confirm">Clear form</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>

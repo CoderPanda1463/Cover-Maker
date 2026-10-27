@@ -1,0 +1,7 @@
+# Personal profile details; do not publish.
+info.txt
+
+# Local editor and operating-system files.
+.vscode/
+.DS_Store
+Thumbs.db
